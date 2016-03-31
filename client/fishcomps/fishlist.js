@@ -1,11 +1,9 @@
 var React = require('react');
 
 var FishCard = require('./fishcard');
-var FishForm = require('./fishform');
 
-var FishList = React.createClass({
-	render: function (){
-		var fishList = this.props.fishArray.map(function(item){
+function FishList(props){
+		var allFish = props.fishArray.map(item =>{
 			return (
 				<FishCard
 				name ={ item.name }
@@ -14,13 +12,17 @@ var FishList = React.createClass({
 				length ={ item.length }
 				img ={ item.img } />
 			);
-		})
+		});
 		return (
 			<div className = "flex-fish">
-				{ fishList }
+				{ allFish }
 			</div>
 			)
-	}
-});
+	};
+
+FishList.propTypes = {
+	fishArray: React.PropTypes.array.isRequired
+
+};
 
 module.exports = FishList;

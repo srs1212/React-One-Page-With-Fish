@@ -6,7 +6,7 @@ var navBar = React.createClass({
 		var self = this;
 		var link = links.map(function(item){
   			return ( 
-  				<li className="nav-item">
+  				<li className="nav-item" key={item}>
 				<a className="nav-link" 
 				onClick={self.props.setActiveComponent.bind(null, item)}> { item } </a>
 				</li>
