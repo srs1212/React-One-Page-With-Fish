@@ -5,3 +5,30 @@ body {
   font: 100% $font-stack;
   background: $primary-color;
 }
+
+.loader {
+	font-size: 200px;
+}
+
+.fishpic {	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3px;
+	width: 50%;
+}
+
+.fishcard {
+	width: 30%;
+	display: block;
+}
+
+.flex-fish {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.marginbottom {
+	margin-bottom: 10%;
+}
