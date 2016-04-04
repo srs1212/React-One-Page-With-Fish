@@ -34,6 +34,7 @@ var FishBox = React.createClass({
 		return this.setState ({ activeFishId: id, activeComponent: 'oneFish' })
 	},
 
+
 	showComp: function(){
 		if(this.state.activeComponent === 'fish'){
 			return <FishListData getId= { this.getId }/> 

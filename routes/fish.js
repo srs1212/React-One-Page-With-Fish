@@ -43,7 +43,39 @@ router.route('/one_fish/:fish_id')
 			res.json(afish);
 			}
 		})
-});
+	})
+	.delete(function(req,res){
+		Fish.remove({ _id: req.params.fish_id }, function(err, dfish){
+			if(err){
+			res.status(500).send(err,'Something wrong w/ the Delete Fish');	
+			} else {
+				res.json(dfish);
+			}
+		})
+	})
+	.put(function(req, res){
+		Fish.findById(req.params.fish_id,function(err, fish){
+			if(err) {
+				console.log(err,'Something wrong with edit fish');
+			} else {
+				fish.name = req.body.name ? req.body.name : fish.name;
+				fish.color = req.body.date ? req.body.date : fish.date;
+				fish.people_eater = req.body.people_eater ? req.body.people_eater : fish.people_eater;
+				fish.length = req.body.length ? req.body.length : fish.length;
+				fish.img = req.body.img ? req.body.img : fish.img;
+
+
+				fish.save(function(err){
+					if(err){
+						console.log(err);
+					}else {
+						res.json(fish);
+					}
+			    });
+	  		}
+   	     });
+	});
+
 
 router.route('/man_eater')
 //api/sih/man_eater

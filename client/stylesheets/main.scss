@@ -30,5 +30,18 @@ body {
 }
 
 .marginbottom {
-	margin-bottom: 10%;
+	margin-bottom: 1em;
 }
+
+.fishbuttonleft {
+	display: inline;
+	vertical-align: bottom;
+	float: left;
+}
+
+.fishbuttonright {
+	display: inline;
+	vertical-align: bottom;
+	float: right;
+}
+
