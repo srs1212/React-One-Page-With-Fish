@@ -13,7 +13,7 @@ var navBar = React.createClass({
 				)
 			});
 			return (
-				<nav className="navbar navbar-light bg-faded">
+				<nav className="navbar navbar-light bg-faded margin">
 				  <a className="navbar-brand" href="#">Navbar</a>
 					  <ul className="nav navbar-nav">
 					    { link }

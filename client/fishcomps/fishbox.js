@@ -8,6 +8,7 @@ var React = require('react');
 var FishListData = require ('./fishlistdata');
 var FishFormData = require ('./fishformdata');
 var FishDetailsData = require ('./fishdetailsdata');
+var EditFishData = require('./editfishdata');
 
 
 
@@ -30,9 +31,13 @@ var FishBox = React.createClass({
 			}
 	},
 
-	getId: function(id){
-		return this.setState ({ activeFishId: id, activeComponent: 'oneFish' })
-	},
+	getId: function(whichCompState, id) {
+    	if( whichCompState === 'showOne') {
+            return this.setState({ activeFishId: id, activeComponent: 'oneFish'})
+        } else {
+            return this.setState({ activeFishId: id, activeComponent: 'editFish'})
+        }
+    },
 
 
 	showComp: function(){
@@ -42,6 +47,8 @@ var FishBox = React.createClass({
 			return <FishFormData toggleActiveComp = { this.toggleActiveComp } />
 		} else if (this.state.activeComponent === 'oneFish') {
 			return <FishDetailsData id={ this.state.activeFishId } />
+		} else if (this.state.activeComponent === 'editFish'){
+			return <EditFishData id = { this.state.activeFishId } toggleActiveComp = { this.toggleActiveComp } />
 		} else {
 			throw new Error("invalid activecomponant", this.state.activeComponent)
 		}

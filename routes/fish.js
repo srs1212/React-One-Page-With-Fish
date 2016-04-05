@@ -59,7 +59,7 @@ router.route('/one_fish/:fish_id')
 				console.log(err,'Something wrong with edit fish');
 			} else {
 				fish.name = req.body.name ? req.body.name : fish.name;
-				fish.color = req.body.date ? req.body.date : fish.date;
+				fish.color = req.body.color ? req.body.color : fish.color;
 				fish.people_eater = req.body.people_eater ? req.body.people_eater : fish.people_eater;
 				fish.length = req.body.length ? req.body.length : fish.length;
 				fish.img = req.body.img ? req.body.img : fish.img;

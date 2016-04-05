@@ -37,7 +37,7 @@ var FishFormData = React.createClass({
 
     },
 
-	onFishSubmit: function(e){  //doug calls this submitFishToServer
+	onFishSubmit: function(e){ 
 		e.preventDefault();
 		var fishData = {
     		name: this.state.fishName.trim(),

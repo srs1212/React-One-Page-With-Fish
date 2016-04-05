@@ -30,18 +30,25 @@ body {
 }
 
 .marginbottom {
+	margin-bottom: 50px;
+}
+
+.marginbottom-sm {
 	margin-bottom: 1em;
 }
 
+
 .fishbuttonleft {
 	display: inline;
-	vertical-align: bottom;
 	float: left;
 }
 
 .fishbuttonright {
 	display: inline;
-	vertical-align: bottom;
 	float: right;
 }
+
+.pushtobottomofparent {
+	vertical-align: bottom;
+} //not working
 

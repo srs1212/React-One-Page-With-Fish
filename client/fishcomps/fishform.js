@@ -24,8 +24,8 @@ function FishForm(props){
                     <label htmlFor="exampleSelect1">Eats People?</label>
                     <select onChange={ props.onPeopleEaterChange } type="text" className="form-control" >
                      <option> Select </option>
-                     <option>yes</option>
-                     <option>no</option>
+                     <option value={true}>yes</option>
+                     <option value={false}>no</option>
                      </select>
                   </fieldset>
 
